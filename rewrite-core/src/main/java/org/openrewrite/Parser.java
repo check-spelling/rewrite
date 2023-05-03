@@ -110,7 +110,7 @@ public interface Parser<S extends SourceFile> {
     /**
      * A source input. {@link Input#path} may be a synthetic path and not
      * represent a resolvable path on disk, as is the case when parsing sources
-     * from BigQuery (we have a relative path from the original Github repository
+     * from BigQuery (we have a relative path from the original GitHub repository
      * and the sources, but don't have these sources on disk).
      * <p>
      * Nevertheless, this class is a generalization that applies well enough to

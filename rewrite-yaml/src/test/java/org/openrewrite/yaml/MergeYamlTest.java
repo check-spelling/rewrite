@@ -42,7 +42,7 @@ class MergeYamlTest implements RewriteTest {
           )),
           yaml(
             """
-              name: Github Actions workflow
+              name: GitHub Actions workflow
               on: [workflow_dispatch]
               """
           )

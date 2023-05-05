@@ -69,7 +69,7 @@ public class FixSerializableFields extends Recipe {
                 "\n" +
                 "NOTE: Any fullyQualified names listed in the `fullyQualifiedExclusions` will be marked as transient, even if that SourceFile exists in the same project.\n" +
                 "\n" +
-                "NOTE: This recipe does NOT recursively modify newly `Serilazable` classes to cut down on the graph of SourceFiles that may be impacted during a recipe run.";
+                "NOTE: This recipe does NOT recursively modify newly `Serializable` classes to cut down on the graph of SourceFiles that may be impacted during a recipe run.";
     }
 
     @Override

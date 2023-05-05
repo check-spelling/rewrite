@@ -317,7 +317,7 @@ public abstract class Recipe implements Cloneable {
     }
 
     /**
-     * A recipe can optionally encasulate a visitor that performs operations on a set of source files. Subclasses
+     * A recipe can optionally encapsulate a visitor that performs operations on a set of source files. Subclasses
      * of the recipe may override this method to provide an instance of a visitor that will be used when the recipe
      * is executed.
      *

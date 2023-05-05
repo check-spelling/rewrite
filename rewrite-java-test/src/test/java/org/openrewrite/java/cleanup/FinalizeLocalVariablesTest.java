@@ -403,7 +403,7 @@ class FinalizeLocalVariablesTest implements RewriteTest {
     }
 
     @Test
-    void shouldNotFinalizeVariableWhichIsReassigedInAnotherSwitchBranch() {
+    void shouldNotFinalizeVariableWhichIsReassignedInAnotherSwitchBranch() {
         rewriteRun(
                 java("""
                 class A {             

@@ -147,15 +147,15 @@ class JavaTemplateTest3Test implements RewriteTest {
               final JavaTemplate t = JavaTemplate.builder(() -> getCursor().getParentOrThrow(), "return n == 1;").build();
 
               @Override
-              public J visitReturn(J.Return retrn, ExecutionContext p) {
-                  if (retrn.getExpression() instanceof J.Binary) {
-                      J.Binary binary = (J.Binary) retrn.getExpression();
+              public J visitReturn(J.Return return_, ExecutionContext p) {
+                  if (return_.getExpression() instanceof J.Binary) {
+                      J.Binary binary = (J.Binary) return_.getExpression();
                       if (binary.getRight() instanceof J.Literal &&
                           ((J.Literal) binary.getRight()).getValue().equals(0)) {
-                          return retrn.withTemplate(t, retrn.getCoordinates().replace());
+                          return return_.withTemplate(t, return_.getCoordinates().replace());
                       }
                   }
-                  return retrn;
+                  return return_;
               }
           })),
           java(
@@ -198,14 +198,14 @@ class JavaTemplateTest3Test implements RewriteTest {
               final JavaTemplate t = JavaTemplate.builder(() -> getCursor().getParentOrThrow(), "return n == 1;").build();
 
               @Override
-              public J visitReturn(J.Return retrn, ExecutionContext p) {
-                  if (retrn.getExpression() instanceof J.Binary) {
-                      J.Binary binary = (J.Binary) retrn.getExpression();
+              public J visitReturn(J.Return return_, ExecutionContext p) {
+                  if (return_.getExpression() instanceof J.Binary) {
+                      J.Binary binary = (J.Binary) return_.getExpression();
                       if (binary.getRight() instanceof J.Literal && ((J.Literal) binary.getRight()).getValue().equals(0)) {
-                          return retrn.withTemplate(t, retrn.getCoordinates().replace());
+                          return return_.withTemplate(t, return_.getCoordinates().replace());
                       }
                   }
-                  return retrn;
+                  return return_;
               }
           })),
           java(

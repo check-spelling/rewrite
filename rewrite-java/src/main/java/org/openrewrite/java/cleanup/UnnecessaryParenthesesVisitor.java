@@ -109,8 +109,8 @@ public class UnnecessaryParenthesesVisitor<P> extends JavaVisitor<P> {
     }
 
     @Override
-    public J visitReturn(J.Return retrn, P p) {
-        J.Return rtn = visitAndCast(retrn, p, super::visitReturn);
+    public J visitReturn(J.Return return_, P p) {
+        J.Return rtn = visitAndCast(return_, p, super::visitReturn);
         if (style.getExpr() && rtn.getExpression() instanceof J.Parentheses) {
             rtn = (J.Return) new UnwrapParentheses<>((J.Parentheses<?>) rtn.getExpression()).visitNonNull(rtn, p, getCursor().getParentOrThrow());
         }

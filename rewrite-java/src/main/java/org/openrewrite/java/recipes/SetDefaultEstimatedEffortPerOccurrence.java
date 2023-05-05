@@ -39,7 +39,7 @@ public class SetDefaultEstimatedEffortPerOccurrence extends Recipe {
 
     @Override
     public String getDescription() {
-        return "Retrofit recipes with a deafult estimated effort per occurrence.";
+        return "Retrofit recipes with a default estimated effort per occurrence.";
     }
 
     @Override

@@ -464,7 +464,7 @@ public abstract class Recipe implements Cloneable {
 
     /**
      * Override this to generate new source files or delete source files.
-     * Note that here, as throughout OpenRewrite, we use referential equality to detect that a change has occured.
+     * Note that here, as throughout OpenRewrite, we use referential equality to detect that a change has occurred.
      * To indicate to rewrite that the recipe has made changes a different instance must be returned than the instance
      * passed in as "before".
      * <p>

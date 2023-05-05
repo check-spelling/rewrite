@@ -401,7 +401,7 @@ public abstract class TreeVisitor<T extends Tree, P> {
             }
         }
         throw new IllegalArgumentException("Expected to find a tree type somewhere in the type parameters of the " +
-                                           "type hierarhcy of visitor " + getClass().getName());
+                                           "type hierarchy of visitor " + getClass().getName());
     }
 
     public <R extends Tree, V extends TreeVisitor<R, P>> V adapt(Class<? extends V> adaptTo) {

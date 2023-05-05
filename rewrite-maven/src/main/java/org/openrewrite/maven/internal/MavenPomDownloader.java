@@ -252,7 +252,7 @@ public class MavenPomDownloader {
                     try {
                         MavenMetadata derivedMeta = deriveMetadata(gav, repo);
                         if (derivedMeta != null) {
-                            Counter.builder("rewrite.maven.derived.metatdata")
+                            Counter.builder("rewrite.maven.derived.metadata")
                                     .tag("repositoryUri", repo.getUri())
                                     .tag("group", gav.getGroupId())
                                     .tag("artifact", gav.getArtifactId())

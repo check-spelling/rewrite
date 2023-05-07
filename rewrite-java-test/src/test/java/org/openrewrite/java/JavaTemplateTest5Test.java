@@ -106,9 +106,9 @@ class JavaTemplateTest5Test implements RewriteTest {
                 .build();
 
               @Override
-              public J visitAssert(J.Assert azzert, ExecutionContext p) {
+              public J visitAssert(J.Assert assert_, ExecutionContext p) {
                   maybeAddImport("java.util.List");
-                  return azzert.withTemplate(t, azzert.getCoordinates().replace());
+                  return assert_.withTemplate(t, assert_.getCoordinates().replace());
               }
           })),
           java(

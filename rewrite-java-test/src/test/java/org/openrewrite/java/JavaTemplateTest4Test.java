@@ -254,8 +254,8 @@ class JavaTemplateTest4Test implements RewriteTest {
                 .build();
 
               @Override
-              public J visitAssert(J.Assert azzert, ExecutionContext p) {
-                  return azzert.withTemplate(t, azzert.getCoordinates().replace());
+              public J visitAssert(J.Assert assert_, ExecutionContext p) {
+                  return assert_.withTemplate(t, assert_.getCoordinates().replace());
               }
           })),
           java(

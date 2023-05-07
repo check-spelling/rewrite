@@ -134,7 +134,7 @@ public class ReplaceStringBuilderWithString extends Recipe {
     }
 
     /**
-     * Return ture if the method calls chain is like "new StringBuilder().append("A")....append("B");"
+     * Return true if the method calls chain is like "new StringBuilder().append("A")....append("B");"
      * @param method a StringBuilder.toString() method call
      * @param methodChain output methods chain
      * @param arguments output expression list to be chained by '+'.

@@ -38,13 +38,13 @@ class JavaTemplateImportTest implements RewriteTest {
             .recipe(toRecipe(() -> new JavaVisitor<>() {
 
                 @Override
-                public J visitImport(J.Import impoort, ExecutionContext executionContext) {
-                    impoort = impoort.withTemplate(
+                public J visitImport(J.Import import_, ExecutionContext executionContext) {
+                    import_ = import_.withTemplate(
                       JavaTemplate.builder(this::getCursor, "import #{}").build(),
-                      impoort.getCoordinates().replace(),
+                      import_.getCoordinates().replace(),
                       "java.util.Stack"
                     );
-                    return impoort;
+                    return import_;
                 }
             }
           )),

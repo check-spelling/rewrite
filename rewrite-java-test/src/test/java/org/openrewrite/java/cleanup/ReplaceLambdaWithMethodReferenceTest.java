@@ -697,8 +697,8 @@ class ReplaceLambdaWithMethodReferenceTest implements RewriteTest {
               package abc;
                             
               class M {
-                  MyFunction getFunction(String fcn) {
-                      return () -> fcn;
+                  MyFunction getFunction(String function_) {
+                      return () -> function_;
                   }
               }
               """

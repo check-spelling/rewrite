@@ -103,7 +103,6 @@ jobs:
         report-timing: 1
         experimental_apply_changes_via_bot: 1
         use_sarif: ${{ (!github.event.pull_request || (github.event.pull_request.head.repo.full_name == github.repository)) && 1 }}
-        debug: 1
         extra_dictionary_limit: 1
         extra_dictionaries:
           cspell:typescript/dict/typescript.txt
@@ -114,7 +113,7 @@ jobs:
           cspell:node/dict/node.txt
           cspell:css/dict/css0.txt
           cspell:php/dict/php.txt
-          cspell:java/src/java-terms.txt
+          cspell:java/src/zjava-terms.txt
           cspell:aws/aws.txt
           cspell:golang/dict/go.txt
           cspell:filetypes/filetypes.txt
@@ -122,6 +121,7 @@ jobs:
           cspell:html/dict/html.txt
         check_extra_dictionaries:
           cspell:html/dict/html.txt
+          cspell:node/dict/node2.txt
 
   update:
     name: Update PR
